@@ -6,9 +6,9 @@
  * @Repository: https://github.com/BaseMax/WebPostPHP
  */
 class WebPostPHP {
-	public $id=0;
-	public $scripts=[];
-	public $load=0;
+	private $id=0;
+	private $scripts=[];
+	private $load=0;
 	public function __construct() {}
 	private function parse($action, $params, $text) {
 		$this->scripts[$this->id++]=[$action, $params, $text];
@@ -34,7 +34,11 @@ class WebPostPHP {
 			$id=$this->parse($match[1], $this->toArray($match[2]), $text);
 		}
 		else if(is_array($params)) {
-			$id=$this->parse($action, $params, $text);
+			$vals=[];
+			foreach($params as $key=>$value) {
+				$vals[]=[$key, $value];
+			}
+			$id=$this->parse($action, $vals, $text);
 		}
 		else {
 			$values=$this->toArray($params);
@@ -46,6 +50,7 @@ class WebPostPHP {
 		$action=$this->scripts[$id][0];
 		$values=$this->scripts[$id][1];
 		$text=$this->scripts[$id][2];
+		$id++;
 		print "<form action=\"$action\" id=\"web-post-php-$id\">\n";
 		foreach($values as $i=>$value) {
 			print "<input type=\"hidden\" name=\"$value[0]\" value=\"$value[1]\">\n";
@@ -53,11 +58,4 @@ class WebPostPHP {
 		print "<button style=\"background:transparent;border:0px;\">$text</button>\n";
 		print "</form>\n";
 	}
-	// private function init() {}
-	// public function scripts() {
-	// 	if($this->load == 0) {
-	// 		$this->init();
-	// 		$this->load=1;
-	// 	}
-	// }
 }
