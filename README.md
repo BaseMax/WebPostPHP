@@ -28,6 +28,20 @@ $WebPost->add("index.php", $values, "Click here");
 <input type="hidden" name="name" value="adam">
 <input type="hidden" name="city" value="Berlin">
 <input type="hidden" name="Age" value="30">
+<button style="background:transparent;border:0px;">Click</button>
+</form>
+
+<form action="index.php" id="web-post-php-2">
+<input type="hidden" name="name" value="adam">
+<input type="hidden" name="city" value="Berlin">
+<input type="hidden" name="Age" value="30">
+<button style="background:transparent;border:0px;">Click here</button>
+</form>
+
+<form action="index.php" id="web-post-php-3">
+<input type="hidden" name="name" value="adam">
+<input type="hidden" name="city" value="Berlin">
+<input type="hidden" name="Age" value="30">
 <button style="background:transparent;border:0px;">Click here</button>
 </form>
 ```
