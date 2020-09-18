@@ -6,7 +6,7 @@
 
 Usually POST Requests are better then GET.
 
-Easily convert <a href="index.php?name=adam&city=Berlin&Age=30"> as GET request to POST request.
+Easily convert `<a href="index.php?name=adam&city=Berlin&Age=30">Click</a>` as GET request to POST request.
 
 ### Using Web Post PHP
 
