@@ -1,6 +1,6 @@
-# Auto Web Post PHP
+# Web Post PHP
 
-### Using AWP-PHP
+### Using Web Post PHP
 
 ```php
 <?php
