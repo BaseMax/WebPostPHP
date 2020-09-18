@@ -1,5 +1,7 @@
 # Web Post PHP
 
+**WebPostPHP** is a PHP library to build HTML form to send POST request.
+
 ### Using Web Post PHP
 
 ```php
