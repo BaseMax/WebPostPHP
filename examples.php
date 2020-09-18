@@ -11,6 +11,3 @@ require "src/WebPost.php";
 $WebPost=new WebPostPHP();
 $WebPost->add("index.php", "name=adam&city=Berlin&Age=30", "Click here");
 $WebPost->add("index.php?name=adam&city=Berlin&Age=30", "Click");
-// print_r($WebPost->scripts);
-// $WebPost->scripts();
-
