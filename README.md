@@ -4,23 +4,17 @@
 
 ```php
 <?php
-postHref("index.php", "name=adam&city=Berlin&Age=30");
-?>
-```
+$WebPost=new WebPostPHP();
 
-```php
-<?php
-postHref("index.php?name=adam&city=Berlin&Age=30");
-?>
-```
+$WebPost->add("index.php?name=adam&city=Berlin&Age=30", "Click");
 
-```php
-<?php
+$WebPost->add("index.php", "name=adam&city=Berlin&Age=30", "Click here");
+
 $values=[
   "name"=>"adam",
   "city"=>"Berlin",
   "Age"=>30,
 ];
-postHref("index.php", $values);
+$WebPost->add("index.php", $values, "Click here");
 ?>
 ```
