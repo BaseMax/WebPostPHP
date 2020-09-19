@@ -51,7 +51,7 @@ class WebPostPHP {
 		$values=$this->scripts[$id][1];
 		$text=$this->scripts[$id][2];
 		$id++;
-		print "<form action=\"$action\" id=\"web-post-php-$id\">\n";
+		print "<form method=\"POST\" action=\"$action\" id=\"web-post-php-$id\">\n";
 		foreach($values as $i=>$value) {
 			print "<input type=\"hidden\" name=\"$value[0]\" value=\"$value[1]\">\n";
 		}
